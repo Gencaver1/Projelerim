@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        
+        
+    </h:head>
+    <h:body>
+        
+        <center>
+            <h1>Admin Girişi</h1>
+        <h:form>
+            <h:panelGrid columns="2" >
+                Email: <h:inputText id="emailAdmin" value="#{vTadmin.admin_mail}" required="true"      
+                                    requiredMessage="Bu alanı boş bırakamazsınız."/> 
+                        
+                Password: <h:inputSecret value="#{vTadmin.admin_password}"/>
+                <br></br> <h:commandButton value="Giriş" action="#{vTadmin.adminsayfasiGiris()}"/>
+            </h:panelGrid>       
+        </h:form>
+        
+        </center>
+        
+        
+        
+        
+    </h:body>
+</html>
+

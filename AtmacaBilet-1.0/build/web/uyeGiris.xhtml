@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>üye ol</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+               
+        <center>
+            <h:form>
+                <h:panelGrid columns="2" style="padding: inherit ">
+                    <h:outputText value="Email:"/>
+                    <h:inputText id="EmailInputTex" required="true" requiredMessage="Emaili boş bırakamazsınız." value="#{uyeEkle.email}"
+                                 validatorMessage="Geçersiz Email">
+                        <f:validateRegex pattern="\w+([-+.']\w+)*@(ogr.iu.edu.tr|gmail.com|outlook.com|hotmail.com)"/></h:inputText>
+                    
+                    <h:outputText value="Ad:"/>
+                    <h:inputText id="İsimInputText" required="true" 
+                                 requiredMessage="Lütfen isim giriniz !" value="#{uyeEkle.uye_ad}"/>
+                    
+                    <h:outputText value="Soyad:"/>
+                    <h:inputText id="SoyisimInputText" required="true" 
+                                 requiredMessage="Lütfen soyisim giriniz !" value="#{uyeEkle.uye_soyad}"/>
+                    
+                    <h:outputText value="Telefon:"/>
+                    <h:inputText value="#{uyeEkle.uye_telefon}"/>
+                    
+                    <h:outputText value="Doğum Tarihi:"/>
+                    <h:inputText value="#{uyeEkle.uye_dogumtarihi}"/>
+                    
+                    <h:outputText value="Şifre:"/>
+                    <h:inputSecret id="ŞifreInputText" value="#{uyeEkle.uye_sifre}" required="true" 
+                                   requiredMessage="şifreyi boş bırakamazsınız" validatorMessage="Yanlış Format">
+                        <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,30})"/> </h:inputSecret>
+                    
+                    <br></br> 
+                    <h:commandButton value="Ekle" action="#{uyeEkle.Ekle()}"/>
+                    
+                    
+                </h:panelGrid>
+            
+            </h:form>
+        </center>
+        
+    </body>
+</html>

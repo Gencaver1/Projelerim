@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <link href="Style.css" rel="stylesheet" type="text/css"></link>
+        
+    </h:head>
+    <h:body style="background: url(resources/img/arkaplan.jpg); background-size: 100%">
+        
+        
+
+        <h:form style=";background-color: white; height: 150px; margin: -8px">
+            <h:panelGroup style="position: relative">
+                <p:graphicImage value="resources/img/logo.png" style="margin-top: -20px; margin-left: 50px"/>           
+                <p:commandButton value="Giris Yap" action="/giris?faces-redirect=true" style="margin-left: 800px; margin-top: 5em; width: 95px; height: 35px"/>                
+                <p:commandButton value="Üye Ol" action="/uyeol?faces-redirect=true" style=" margin-left: 10px; margin-top: 5em; width: 95px; height: 35px"/> 
+                <p:commandButton value="İletişim" action="iletisim.xhtml" />                
+            </h:panelGroup>
+        </h:form> 
+        
+        <center>
+        <h:form>
+            <h:commandButton value="Control Page" action="control"/>
+        </h:form>
+        </center>
+        
+        
+        
+        
+
+
+
+        <h:form style="background: rgba(0, 0, 0, 0.6); width: 50%; height: 250px; margin-left: 25%; margin-top: 10%">
+            <h:panelGrid columns="4" style="width: border-box; height: border-box; color: white; font-weight: bold" >
+
+                <h:outputText value="Kalkış:" style="margin-left: 60px; font-size: xx-large"/>
+                <p:selectOneMenu value="#{atmaca.kalkisYeri}" style="width: 150px; height: 30px; margin-left:10px">
+                    <f:selectItems value="#{atmaca.iller}" />
+                </p:selectOneMenu>
+
+                <h:outputText value="Varış:" style="margin-left: 70px; font-size: xx-large"/>
+                <p:selectOneMenu value="#{atmaca.varisyeri}" style="width: 150px; height: 30px; margin-left:10px">
+                    <f:selectItems value="#{atmaca.iller}"/>
+                </p:selectOneMenu>
+
+                <h:outputText value="Saat:" style="margin-left: 60px; font-size: xx-large"/>
+                <p:selectOneMenu value="#{atmaca.saat}" style="width: 150px; height: 30px; margin-left:10px">
+                    <f:selectItems value="#{atmaca.saatler}"/> 
+                </p:selectOneMenu>
+
+            </h:panelGrid>
+
+            <p:panelGrid columns="2" style="margin-left: 60%; color: white; font-weight: bold">
+                Yetişkin(24+):<h:inputText value="" style="margin-left: 10px; width: 25px"/>
+                Genç(12-24):<h:inputText value="" style="margin-left: 10px; width: 25px"/>
+                Çocuk(2-12):<h:inputText value="" style="margin-left: 10px; width: 25px"/>
+            </p:panelGrid>
+
+            <p:commandButton value="UÇUŞ ARA" style="width: 250px; height: 50px; margin-left: 60%; margin-top: 20px;  
+                             background-color: chocolate; font-size: xx-large; color: lavenderblush; font-weight: bolder"/>
+
+        </h:form>
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+        
+    </h:body>
+</html>
+

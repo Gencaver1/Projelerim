@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <h1>JSF 2 outputStylesheet example</h1>
+    	
+    	
+    	
+    	
+        
+    </h:head>
+    <h:body class=".body">
+        
+        
+        
+        
+        
+        <p:layout fullPage="true">
+                <p:layoutUnit position="north" size="100">
+                    <p:panelGrid columns="4" style="position: relative">
+                        <p:graphicImage value="resources/images/logo.png" style="margin-top: -20px; margin-left: 50px"/>           
+                        <p:commandButton value="Giris Yap" action="#{atmaca.action1()}" style="margin-left: 800px; margin-top: 5em; width: 95px; height: 35px"/>                
+                        <p:commandButton value="Üye Ol" action="#{atmaca.action()}" style=" margin-left: 10px; margin-top: 5em; width: 95px; height: 35px"/> 
+                    </p:panelGrid>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100">
+                    <h:outputText value="South unit content." />
+                </p:layoutUnit>
+
+                
+
+                
+
+                <p:layoutUnit position="center">
+                    <p:layout>
+                        <p:layoutUnit position="north" size="100">
+                            <h:outputText value="Middle top unit content." />
+                        </p:layoutUnit>
+
+                        
+                        
+                        <p:layoutUnit position="west" size="100">
+                            <h:outputText value="Middle left unit content." />
+                        </p:layoutUnit>
+
+                        <p:layoutUnit position="east" size="200">
+                            <h:outputText value="Middle right unit content." />
+                        </p:layoutUnit>
+
+                        <p:layoutUnit position="center">
+                            <h:outputText value="Middle center unit content." />
+                        </p:layoutUnit>
+                    </p:layout>
+                </p:layoutUnit>
+            </p:layout>
+        
+        
+    </h:body>
+</html>
+
